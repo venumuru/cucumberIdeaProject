@@ -28,7 +28,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: mvn test
+        run: mvn test -Dcucumber.filter.tags="@LoginValid"
       - name: Print github context
         run: |
           echo ${{ github.event.client_payload.github.actor}}
