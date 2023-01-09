@@ -6,9 +6,11 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Automation test case workflow
 
 on:
+  repository_dispatch:
+    types: [ my-event ]
   push:
     branches: [ "master" ]
   pull_request:
@@ -27,3 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn test
+    - name: Print github context
+      run: |
+        echo ${{ github.event.client_payload.github.actions}}
+        echo ${{ github.event.client_payload.github.actor}}
+
