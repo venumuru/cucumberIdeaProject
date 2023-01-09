@@ -28,8 +28,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: mvn test
+        run: mvn clean test -Dcucumber.filter.tags=“${{ github.event.client_payload.github.event.inputs.testcaseTag}}”
       - name: Print github context
         run: |
-          echo ${{ github.event.client_payload.github.actions}}
           echo ${{ github.event.client_payload.github.actor}}
+          echo ${{ github.event.client_payload.github.event.inputs.testcaseTag}}
