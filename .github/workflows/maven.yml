@@ -33,4 +33,4 @@ jobs:
         run: |
           echo ${{ github.event.client_payload.github.actions}}
           echo ${{ github.event.client_payload.github.actor}}
-          echo ${{ github.event.client_payload.inputs.testcaseTag}}
+          echo ${{ github.event.client_payload.github.inputs.testcaseTag}}
