@@ -8,7 +8,7 @@ public class Login {
 
     @Given("user is on the application login page")
     public void loginPage(){
-        System.out.println("User is on application login page");
+        System.out.println("user is on application login page");
     }
 
     @When("user submits valid username and password")
