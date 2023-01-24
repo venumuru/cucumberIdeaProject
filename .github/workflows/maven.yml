@@ -9,6 +9,7 @@
 name: Automation test case workflow
 
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [ my-event ]
   push:
