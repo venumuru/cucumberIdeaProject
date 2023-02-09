@@ -38,6 +38,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.1.5
         with:
           branch: gh-pages
-          github_token: ${{secrets.G_ACCESS_TOKEN}}
-          publish_dir: ./target/cucumber-report.html
+          token: ${{secrets.G_ACCESS_TOKEN}}
+          folder: ./target/cucumber-report.html
 
