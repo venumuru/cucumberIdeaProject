@@ -39,5 +39,5 @@ jobs:
         with:
           branch: gh-pages
           token: ${{secrets.G_ACCESS_TOKEN}}
-          folder: ./target/cucumber-report.html
+          folder: ./target
 
