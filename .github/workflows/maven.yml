@@ -35,8 +35,9 @@ jobs:
           echo ${{ github.event.client_payload.github.actor}}
           echo ${{ github.event.client_payload.github.event.inputs.testcaseTag}}
       - name: Deploy report to github pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{secrets.G_ACCESS_TOKEN}}
-          publish_dir: ./target/cucumber-report.html
+          branch: gh-pages
+          token: ${{secrets.G_ACCESS_TOKEN}}
+          folder: ./target
 
