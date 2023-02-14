@@ -31,7 +31,7 @@ jobs:
       - name: Install chrome browser
         run: |
           chmod +x ./scripts/InstallChrome.sh
-          ./scripts/InstallChrome.sh
+           ./scripts/InstallChrome.sh
       - name: Build with Maven
         run: mvn test -Dcucumber.filter.tags="${{ github.event.client_payload.github.event.inputs.testcaseTag}}"
       - name: Print github context
