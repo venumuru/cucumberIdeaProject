@@ -24,6 +24,7 @@ public class Login {
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
         driver.close();
+        System.out.println("Title of the page "+driver.getTitle());
         System.out.println("user is on application login page");
     }
 
