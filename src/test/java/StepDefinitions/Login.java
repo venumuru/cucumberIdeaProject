@@ -4,9 +4,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.bson.assertions.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+
 import java.util.concurrent.TimeUnit;
 
 public class Login {
@@ -23,6 +26,7 @@ public class Login {
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
         System.out.println("Title of the page "+driver.getTitle());
+        Assert.assertEquals(driver.getTitle(),"notitle");
         driver.close();
         System.out.println("user is on application login page");
     }
