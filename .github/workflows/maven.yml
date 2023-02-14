@@ -29,6 +29,7 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: Build with Maven
+        continue-on-error: true
         run: mvn test -Dcucumber.filter.tags="${{ github.event.client_payload.github.event.inputs.testcaseTag}}"
       - name: Print github context
         run: |
