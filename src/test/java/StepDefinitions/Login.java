@@ -26,7 +26,7 @@ public class Login {
         driver.manage().window().maximize();
         driver.get("https://www.google.com");
         System.out.println("Title of the page "+driver.getTitle());
-        Assert.assertEquals(driver.getTitle(),"notitle");
+        Assert.assertEquals(driver.getTitle(),"Google");
         driver.close();
         System.out.println("user is on application login page");
     }
