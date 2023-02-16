@@ -6,12 +6,10 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Automation test case workflow
+name: Execute sanity test cases
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-    types: [ my-event ]
   push:
     branches: [ "master" ]
   pull_request:

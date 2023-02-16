@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Automation test case workflow
+name: Execute test cases based on the tags by user
 
 on:
   workflow_dispatch:
