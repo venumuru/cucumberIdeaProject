@@ -30,8 +30,7 @@ jobs:
           cache: maven
       - name: Print github context
         run: |
-          echo ${{ github.event.client_payload.github.actor}}
-          echo ${{ github.event.client_payload.github.event.inputs.testcaseTag}}    
+          echo ${{ github.event.client_payload.Tag}} 
       - name: Build with Maven
         continue-on-error: true
         run: mvn test -Dcucumber.filter.tags="${{ github.event.client_payload.github.event.inputs.testcaseTag}}"
