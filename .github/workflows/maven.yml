@@ -14,7 +14,7 @@ on:
       testcaseTag:
         description: 'Select the test case tag'
         required: true
-        default: '@SanityTest'
+        default: '@SanityTes'
         type: string
   repository_dispatch:
     types: [ my-event ]
@@ -36,7 +36,8 @@ jobs:
           cache: maven
       - name: Print github context
         run: |
-          echo ${{ github.event.client_payload.Tag}} 
+          echo ${{ github.event.inputs.testcaseTag}} 
+          echo ${{ github.event.client_payload.testcaseTag}} 
       - name: Build with Maven
         continue-on-error: true
         run: mvn test -Dcucumber.filter.tags="${{ github.event.client_payload.github.event.inputs.testcaseTag}}"
