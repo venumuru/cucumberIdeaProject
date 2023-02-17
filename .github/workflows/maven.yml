@@ -10,6 +10,12 @@ name: Execute test cases based on the tags by user
 
 on:
   workflow_dispatch:
+    inputs:
+      testcaseTag:
+        description: 'Select the test case tag'
+        required: true
+        default: '@SanityTest'
+        type: string
   repository_dispatch:
     types: [ my-event ]
   push:
