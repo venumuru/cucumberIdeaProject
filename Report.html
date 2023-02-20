@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 17, 2023 04:51:25 AM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 20, 2023 10:30:26 AM</span></a>
 </li>
 </ul>
 </div>
@@ -79,7 +79,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@SanityCheck</a><a class="dropdown-item" href="#">@LoginValid</a>
+<a class="dropdown-item" href="#">@LoginValid</a><a class="dropdown-item" href="#">@LoginInvalid</a><a class="dropdown-item" href="#">@SanityCheck</a>
 </ul>
 </li>
 </ul>
@@ -92,7 +92,7 @@
           <div class="test-detail">
             <p class="name">Validation of sample application pages</p>
             <p class="text-sm">
-              <span>4:51:26 AM</span> / <span>00:00:03:182</span>
+              <span>10:30:27 AM</span> / <span>00:00:10:278</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -101,9 +101,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Validation of sample application pages</h5>
-<span class='badge badge-success'>02.17.2023 4:51:26 AM</span>
-<span class='badge badge-danger'>02.17.2023 4:51:29 AM</span>
-<span class='badge badge-default'>00:00:03:182</span>
+<span class='badge badge-success'>02.20.2023 10:30:27 AM</span>
+<span class='badge badge-danger'>02.20.2023 10:30:37 AM</span>
+<span class='badge badge-default'>00:00:10:278</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -138,6 +138,32 @@
           </div>
         </div>
   </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Validate user not able to login with invalid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.Login.loginPage()">
+                <span>Given user is on the application login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Login.enterInvalidUserNameAndPassword()">
+                <span>When user submits invalid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Login.validateUnsuccessfulLogin()">
+                <span>Then application throws error message for invalid credentials</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
 </div>
           </div>
         </li>
@@ -154,46 +180,10 @@
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@SanityCheck</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@SanityCheck</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>04:51:26 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>Validate user able to login with valid credentials</a>
-<div class="">
-<span class="badge badge-default">Validation of sample application pages.Validate user able to login with valid credentials</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
@@ -218,11 +208,93 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>04:51:26 AM</td>
+<td>10:30:27 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Validate user able to login with valid credentials</a>
 <div class="">
 <span class="badge badge-default">Validation of sample application pages.Validate user able to login with valid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@LoginInvalid</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@LoginInvalid</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:30:36 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Validate user not able to login with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">Validation of sample application pages.Validate user not able to login with invalid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@SanityCheck</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SanityCheck</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:30:27 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Validate user able to login with valid credentials</a>
+<div class="">
+<span class="badge badge-default">Validation of sample application pages.Validate user able to login with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:30:36 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Validate user not able to login with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">Validation of sample application pages.Validate user not able to login with invalid credentials</span>
 </div>
 </td>
 </tr>
@@ -243,13 +315,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 17, 2023 04:51:25 AM</h3>
+<h3>Feb 20, 2023 10:30:26 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 17, 2023 04:51:29 AM</h3>
+<h3>Feb 20, 2023 10:30:37 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -300,7 +372,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>2</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -320,7 +392,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>6</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -339,7 +411,7 @@
 </div></div>
 <script>
 var timeline = {
-"Validation of sample application pages":3.182
+"Validation of sample application pages":10.278
 };
 </script>
 <div class="row">
@@ -349,7 +421,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@SanityCheck</td>
+<td>@LoginValid</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -357,8 +429,16 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@LoginValid</td>
+<td>@LoginInvalid</td>
 <td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@SanityCheck</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -378,13 +458,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
+passChild: 2,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 3,
+passGrandChild: 6,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
