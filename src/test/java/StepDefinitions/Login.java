@@ -16,11 +16,10 @@ public class Login {
     public WebDriver driver;
     @Given("user is on the application login page")
     public void loginPage()  {
-        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
+       /* options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
+        options.addArguments("--headless");*/
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
