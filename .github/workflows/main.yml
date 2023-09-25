@@ -27,5 +27,22 @@ jobs:
             echo ${{github.actor}}
             echo ${{job.status}}
             echo ${{runner.os}}
-          
+        - name: test
+            run exit 1    
+
+  my-3rd-job:
+    runs-on: ubuntu-latest
+    if: ${{failure() }}
+    needs: [About-Context]
+    steps:
+      - name: learning about job dependency
+        run: echo '3d job executed'
+        
+  my-4th-job:
+    runs-on: ubuntu-latest
+    if: ${{always() }}
+    needs: [About-Context]
+    steps:
+      - name: learning about job dependency
+        run: echo '3d job executed'         
       
