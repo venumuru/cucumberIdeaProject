@@ -26,9 +26,7 @@ jobs:
           run: |
             echo ${{github.actor}}
             echo ${{job.status}}
-            echo ${{runner.os}}
-        - name: test
-            run exit 1    
+            echo ${{runner.os}}  
 
   my-3rd-job:
     runs-on: ubuntu-latest
