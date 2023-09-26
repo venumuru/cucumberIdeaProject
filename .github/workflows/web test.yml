@@ -1,0 +1,32 @@
+name: To execute the web test
+
+on:
+  workflow_dispatch:
+  push:
+      branches: ["master"]
+
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the project
+        uses: actions/checkout@v3
+
+      - name: Install java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'trmurin'
+          cache: maven
+ 
+  my-second-job:
+   runs-on: ubuntu-latest
+   steps:
+     - name: more about contexts
+       run: |
+         echo ${{github.actor}}
+         echo ${{job.status}}
+         echo ${{runner.os}}
+         echo ${{github.repositoryUrl}}
+       
+     
