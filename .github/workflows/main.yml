@@ -2,6 +2,12 @@ name: To execute the web test
 
 on:
   workflow_dispatch:
+    inputs:
+      tag:
+        description: Name
+        type: string
+        required: true
+        default: Venu
   push:
       branches: ["master"]
 
