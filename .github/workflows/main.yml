@@ -10,7 +10,9 @@ on:
         default: Venu
   push:
       branches: ["master"]
-
+env:
+  name: 'venugopal'
+  
 jobs:
   my-first-job:
     runs-on: ubuntu-latest
@@ -33,7 +35,7 @@ jobs:
             echo ${{github.actor}}
             echo ${{job.status}}
             echo ${{runner.os}}
-            exit 1
+            echo ${{env.name}}
 
   my-3rd-job:
     runs-on: ubuntu-latest
@@ -41,7 +43,11 @@ jobs:
     needs: [About-Context]
     steps:
       - name: learning about job dependency
-        run: echo '3d job executed'
+        run: |
+          echo '3d job executed'
+          echo ${{env.name}}
+        env:
+          name: 'Murugan'
         
   my-4th-job:
     runs-on: ubuntu-latest
