@@ -35,6 +35,7 @@ jobs:
             echo ${{github.actor}}
             echo ${{job.status}}
             echo ${{runner.os}}
+            echo ${{github.repository}}
             echo ${{env.name}}
 
   my-3rd-job:
