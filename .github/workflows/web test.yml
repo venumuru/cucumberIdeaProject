@@ -28,5 +28,24 @@ jobs:
          echo ${{job.status}}
          echo ${{runner.os}}
          echo ${{github.repositoryUrl}}
+
+  my-third-job:
+    runs-on: ubuntu-latest
+    if: ${{failure() }}
+    needs: [my-second-job]
+    steps:
+      - name: 3rd job
+        run: |
+          echo '3rd job executed'
+
+  my-forth-job:
+    runs-on: ubuntu-latest
+    if: ${{always() }}
+    needs: [my-second-job]
+    steps:
+      - name: 4th job
+        run: |
+          echo '4th job executed'        
+ 
        
      
