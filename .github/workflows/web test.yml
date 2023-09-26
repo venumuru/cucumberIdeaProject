@@ -28,6 +28,7 @@ jobs:
          echo ${{job.status}}
          echo ${{runner.os}}
          echo ${{github.repositoryUrl}}
+         exit 1
 
   my-third-job:
     runs-on: ubuntu-latest
