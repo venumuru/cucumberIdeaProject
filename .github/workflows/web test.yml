@@ -2,8 +2,16 @@ name: To execute the web test
 
 on:
   workflow_dispatch:
+    inputs:
+      cucumberTag:
+        description: tag that need to be executed
+        type: string
+        required: true
+        default: '@SanityCheck'
   push:
       branches: ["master"]
+env:
+  name: 'venugopal'
 
 jobs:
   my-first-job:
@@ -28,7 +36,8 @@ jobs:
          echo ${{job.status}}
          echo ${{runner.os}}
          echo ${{github.repositoryUrl}}
-         exit 1
+         echo ${{env.name}}
+         
 
   my-third-job:
     runs-on: ubuntu-latest
